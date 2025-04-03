@@ -1,11 +1,12 @@
 from abc import ABCMeta, abstractmethod
-from factory import iApiConsumer
+from iApiConsumer import API_consumer
 
 
 class ApiCreator(metaclass=ABCMeta):
     @abstractmethod
-    def create_api_consumer(self) -> iApiConsumer:
+    def create_api_consumer(self) -> API_consumer:
         pass
+
 
     def execute(self, id):
         api_consumer = self.create_api_consumer()
