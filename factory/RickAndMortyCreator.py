@@ -1,5 +1,5 @@
-from factory.ApiConsumeCreator import ApiCreator
-from factory.RickAndMorty import RickAndMorty
+from ApiConsumeCreator import ApiCreator
+from RickAndMorty import RickAndMorty
 
 class RickAndMortyCreator(ApiCreator):
     def create_api_consumer(self) -> RickAndMorty:

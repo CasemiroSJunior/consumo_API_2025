@@ -10,10 +10,11 @@ class RickAndMorty(iApiConsumer.API_consumer):
         URL = self.__URL + str(id)
         try:
             request = requests.get(URL).json()
-            self.__Data.append(request)
+            self.__Data = (request)
 
         except:
             RuntimeError("Não foi possível encontrar o personagem", )
 
     def get_data(self):
-        return [(item.get('id'), item.get('name'), item.get('species')) for item in self.__Data]
+        data = self.__Data
+        return ((data.get('id'), data.get('name'), data.get('species')))
